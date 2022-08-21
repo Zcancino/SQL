@@ -1,0 +1,28 @@
+--Create a gaming store database
+
+CREATE TABLE Store (id integer, game text, instock integer, price integer, rating integer, year_released integer);
+
+INSERT INTO Store VALUES (1, "CoD Warzone", 54, 60, 6.5, 2020);
+INSERT INTO Store VALUES (2, "Rust", 10, 30, 5.7, 2013);
+INSERT INTO Store VALUES (3, "Minecraft", 13, 15, 8.5, 2009);
+INSERT INTO Store VALUES (4, "Forza Horizon 5", 1, 45, 8.7, 2021);
+INSERT INTO Store VALUES (5, "Rocket League", 2, 35, 7.8, 2015);
+INSERT INTO Store VALUES (6, "Elden Ring", 7, 55, 9.5, 2022);
+INSERT INTO Store VALUES (7, "HALO 5", 15, 60, 8.3, 2021);
+INSERT INTO Store VALUES (8, "PUBG", 9, 30, 6.4, 2017);
+INSERT INTO Store VALUES (9, "Rainbow 6 Seige", 30, 15, 8.0, 2015);
+INSERT INTO Store VALUES (10, "GTAV", 29, 45, 9.5, 2013);
+INSERT INTO Store VALUES (11, "No Man Sky", 25, 35, 5.9, 2016);
+INSERT INTO Store VALUES (12, "Borderlands III", 40, 55, 8.1, 2019);
+INSERT INTO Store VALUES (13, "Battlefield 2042", 60, 45, 2.8, 2021);
+INSERT INTO Store VALUES (14, "Gears of War 4", 20, 35, 7.8, 2016);
+INSERT INTO Store VALUES (15, "Mortal Kombat X", 14, 55, 8.3, 2015);
+
+--display the database by highest rated games.
+SELECT * FROM Store ORDER BY rating desc;
+
+--display the database by cheapest game.
+SELECT * FROM Store ORDER BY price asc;
+
+--display the database by newest game.
+Select * FROM Store Order BY year_released desc;
